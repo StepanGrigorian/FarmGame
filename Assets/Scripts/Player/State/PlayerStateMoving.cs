@@ -56,4 +56,12 @@ public class PlayerStateMoving : IPlayerState
             player.SetState(Player.GetState<PlayerStateIdle>());
         }
     }
+
+    public void Start()
+    {
+    }
+
+    public void End()
+    {
+    }
 }

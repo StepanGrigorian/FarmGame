@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(PlayerInput))]
 public class Player : MonoBehaviour
 {
     public PlayerInput input { get; private set; }
@@ -67,7 +66,7 @@ public class Player : MonoBehaviour
     }
     private void InitStates()
     {
-        statesDictionary = new();
+        statesDictionary = new Dictionary<Type, IPlayerState>();
         statesDictionary[typeof(PlayerStateIdle)] = new PlayerStateIdle(this);
     }
     public void SetState(IPlayerState state)

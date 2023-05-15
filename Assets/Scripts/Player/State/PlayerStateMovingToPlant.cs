@@ -17,6 +17,9 @@ public class PlayerStateMovingToPlant : IPlayerState
         target = bed.transform.position;
         player.agent.SetDestination(target);
     }
+    public void Start() { }
+
+    public void End() { }
     public void Update()
     {
         SynchronizeAnimatorAndAgent();

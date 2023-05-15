@@ -20,7 +20,6 @@ public abstract class Plant : MonoBehaviour
         plantingDate = DateTime.Now;
         SetState(new PlantStateGrowing(this));
         ui.SetTime(Settings.GrowingTime);
-        StartCoroutine(UpdateState());
     }
     public void SetState(IPlantState state)
     {
@@ -28,14 +27,11 @@ public abstract class Plant : MonoBehaviour
             currentState.End();
         currentState = state;
         currentState.Start();
+        UpdateState();
     }
-    IEnumerator UpdateState()
+    public void UpdateState()
     {
-        while (true)
-        {
-            currentState.Update();
-            yield return new WaitForSeconds(1f);
-        }
+        currentState.Update();
     }
     public void UpdateUI(int time)
     {

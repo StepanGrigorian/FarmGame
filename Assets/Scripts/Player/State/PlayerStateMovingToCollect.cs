@@ -57,4 +57,12 @@ public class PlayerStateMovingToCollect : IPlayerState
             player.SetState(new PlayerStateCollecting(player, plant));
         }
     }
+
+    public void Start()
+    {
+    }
+
+    public void End()
+    {
+    }
 }

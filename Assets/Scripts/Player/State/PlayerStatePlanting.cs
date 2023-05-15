@@ -18,6 +18,9 @@ public class PlayerStatePlanting : IPlayerState
         player.animator.SetBool("isPlanting", true);
         player.StartCoroutine(Plant());
     }
+    public void Update() { }
+    public void OnAnimatorMove() { }
+    public void End() { }
     private IEnumerator Plant()
     {
         yield return new WaitForSeconds(plant.Settings.PlantingTime);

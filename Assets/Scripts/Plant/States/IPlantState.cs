@@ -1,4 +1,3 @@
-using UnityEngine;
 public interface IPlantState
 {
     public void Start();

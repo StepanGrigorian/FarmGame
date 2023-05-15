@@ -7,9 +7,15 @@ public class PlayerStateIdle : IPlayerState
     {
         this.player = player;
     }
+
     public void Start()
     {
         player.animator.SetBool("isMoving", false);
         player.animator.SetBool("isPlanting", false);
     }
+
+    public void Update() { }
+    public void OnAnimatorMove() { }
+
+    public void End() { }
 }

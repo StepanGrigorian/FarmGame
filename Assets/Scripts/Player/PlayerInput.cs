@@ -28,8 +28,7 @@ public class PlayerInput : MonoBehaviour
                 if (hit.rigidbody != null)
                 {
                     GameObject obj = hit.rigidbody.gameObject;
-                    Bed item;
-                    obj.TryGetComponent(out item);
+                    obj.TryGetComponent(out Bed item);
                     if (item != null)
                     {
                         if (item.currentPlant == null)
